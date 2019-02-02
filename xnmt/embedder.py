@@ -212,6 +212,7 @@ class PretrainedSimpleWordEmbedder(SimpleWordEmbedder):
     self.word_dropout = word_dropout
     self.word_id_mask = None
     self.train = False
+    self.fix_norm = None
 
     with io.open(filename, encoding='utf-8') as embeddings_file:
       total_embs, in_vocab, missing, initial_embeddings = self._read_fasttext_embeddings(vocab, embeddings_file)
